@@ -40,7 +40,7 @@ typedef struct{
 }Curso;
 
 Aluno lerAluno();
-
+void lerDiciplina();
 
 int main(){
 
@@ -58,4 +58,28 @@ Aluno lerAluno(){
     aluno.nome[i][strcspn(aluno.nome[i],"\n")] = '\0';
     
     return aluno;
+}
+
+void lerDiciplina(){
+    Disciplina disciplina;
+    Aluno aluno[100];
+    int posAluno = 0;
+    int opcao;
+    
+    printf("Indentificador: ");
+    scanf("%d", &disciplina.identificador);
+    printf("Horario: ");
+    scanf("%d", &disciplina.identificador);
+    printf("Adicione alunos\n");
+    do{
+        printf("RA do Aluno: ");
+        scanf("%d", &aluno.RA[posAluno]);
+        printf("Adicionar aluno?\n1 - Sim\n2 - Nao\n");
+        scanf("%d", &opcao);
+        posAluno++;
+    }while(opcao == 1);
+}
+
+void lerCurso(){
+    
 }
